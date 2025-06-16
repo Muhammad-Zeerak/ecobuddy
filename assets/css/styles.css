@@ -1,0 +1,110 @@
+/* Main color scheme */
+:root {
+    --eco-primary: #2E8B57;
+    --eco-secondary: #3CB371;
+    --eco-accent: #66CDAA;
+    --eco-light: #E8F5E9;
+    --eco-dark: #1B5E20;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header customization */
+.navbar-dark.bg-success {
+    background-color: var(--eco-primary) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-header.bg-success {
+    background-color: var(--eco-primary) !important;
+}
+
+/* Form styling */
+.form-control:focus, .form-select:focus {
+    border-color: var(--eco-accent);
+    box-shadow: 0 0 0 0.25rem rgba(46, 139, 87, 0.25);
+}
+
+.btn-success {
+    background-color: var(--eco-primary);
+    border-color: var(--eco-primary);
+}
+
+.btn-success:hover, .btn-success:focus {
+    background-color: var(--eco-dark);
+    border-color: var(--eco-dark);
+}
+
+.btn-outline-success {
+    color: var(--eco-primary);
+    border-color: var(--eco-primary);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--eco-primary);
+    border-color: var(--eco-primary);
+}
+
+/* Pagination */
+.page-item.active .page-link {
+    background-color: var(--eco-primary);
+    border-color: var(--eco-primary);
+}
+
+.page-link {
+    color: var(--eco-primary);
+}
+
+.page-link:hover {
+    color: var(--eco-dark);
+}
+
+.container.mb-4 {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    background-color: var(--eco-primary) !important;
+    margin-top: auto !important;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.25rem;
+    }
+}

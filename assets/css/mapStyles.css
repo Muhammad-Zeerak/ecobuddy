@@ -1,0 +1,172 @@
+/* Facility list styling */
+.facility-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.facility-item:hover {
+    background-color: rgba(46, 139, 87, 0.1);
+}
+
+.facility-item.active {
+    background-color: rgba(46, 139, 87, 0.2);
+    border-left: 3px solid #2E8B57;
+}
+
+/* Notification styling */
+.notification-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    min-width: 300px;
+}
+
+/* Leaflet popup styling */
+.leaflet-popup-content {
+    min-width: 250px !important;
+}
+
+.leaflet-popup-content a,
+.leaflet-popup-content button {
+    display: inline-block !important;
+}
+
+.leaflet-popup-content a.btn-primary {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+}
+
+.popup-buttons {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+}
+
+/* Modal backdrop styling */
+body:not(.modal-open) .modal-backdrop {
+    display: none !important;
+}
+
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+.modal {
+    z-index: 1050 !important;
+}
+
+/* Status updates styling */
+.status-item {
+    margin-bottom: 10px;
+}
+
+.status-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Infinite scrolling styling */
+.facility-list-container {
+    scrollbar-width: thin;
+    scrollbar-color: #3CB371 #f8f9fa;
+}
+
+.facility-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.facility-list-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+.facility-list-container::-webkit-scrollbar-thumb {
+    background-color: #3CB371;
+    border-radius: 3px;
+}
+
+/* Make list items more compact */
+#facility-list .card-body {
+    padding: 0.5rem 1rem;
+}
+
+/* Loading indicator */
+#loading-indicator {
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Sentinel element (invisible element for detecting scroll position) */
+.sentinel {
+    height: 1px;
+    visibility: hidden;
+}
+
+/* Status info styling */
+#status-info {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Error display */
+#facilities-error {
+    display: none;
+    margin-bottom: 0.5rem;
+}
+
+/* Load more button styling */
+#load-more-btn {
+    display: none;
+}
+
+/* User location marker pulsing effect */
+@keyframes pulse-animation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.user-location-pulse {
+    animation: pulse-animation 2s infinite ease-in-out;
+    transform-origin: center center;
+}
+
+/* Feature shimmer loading effect */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.loading-item {
+    height: 80px;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.no-intersection-observer #load-more-btn {
+    display: inline-block;
+}
